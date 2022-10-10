@@ -27,6 +27,33 @@ class _Main_TaskState extends State<Main_Task> {
 return DefaultTabController(
   length: 3,
   child:   Scaffold(
+    drawer: Drawer(child: Column(
+      children: [
+      UserAccountsDrawerHeader(
+        currentAccountPicture: CircleAvatar(child: Text('ST'),),
+          accountName: Text('Sabah tartir'),
+          accountEmail: Text('Sabahtartir99@gmail.com')),
+
+        ListTile(
+          title: Text('All tasks'),
+          subtitle: Text('Go to show All tasks'),
+          leading:Icon(Icons.view_headline_sharp),
+        trailing: Icon(Icons.arrow_forward_ios),),
+
+        ListTile(
+          title: Text('Completed tasks'),
+          subtitle: Text('Go to show the completed tasks'),
+          leading:Icon(Icons.done),
+          trailing: Icon(Icons.arrow_forward_ios),),
+
+        ListTile(
+          title: Text('InCompleted tasks'),
+          subtitle: Text('Go to show the incompleted tasks'),
+          leading:Icon(Icons.clear),
+          trailing: Icon(Icons.arrow_forward_ios),),
+    ],
+    ),
+    ),
 
     appBar: AppBar(
 
