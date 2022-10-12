@@ -25,6 +25,12 @@ class _Main_TaskState extends State<Main_Task> with SingleTickerProviderStateMix
   inisializeTabController(){
     tabController=TabController(length: 3, vsync: this);
   }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    tabController.dispose();
+  }
 @override
   void initState() {
     // TODO: implement initState
@@ -44,6 +50,7 @@ return Scaffold(
       ListTile(
         onTap: (){
           tabController.animateTo(0);
+          Navigator.pop(context);
         },
         title: Text('All tasks'),
         subtitle: Text('Go to show All tasks'),
@@ -53,6 +60,7 @@ return Scaffold(
       ListTile(
         onTap: (){
           tabController.animateTo(1);
+          Navigator.pop(context);
         },
         title: Text('Completed tasks'),
         subtitle: Text('Go to show the completed tasks'),
@@ -62,7 +70,7 @@ return Scaffold(
       ListTile(
         onTap: (){
           tabController.animateTo(2);
-          
+          Navigator.pop(context);
         },
         title: Text('InCompleted tasks'),
         subtitle: Text('Go to show the incompleted tasks'),
