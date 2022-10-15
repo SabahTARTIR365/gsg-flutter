@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gsg/article.dart';
+import 'package:flutter_gsg/social_app/views/screens/main_socialapp_screen.dart';
 import 'package:flutter_gsg/task_managementt_app/main_task_screen.dart';
 import 'data.dart';
 
 void main() {
   runApp( MaterialApp(
     title: 'Flutter Demo',
-    home:Main_Task(), // articlApp(),//NewsApp(),//MyApp(),
+    home:MainSocialAppScreen(),//Main_Task(), // articlApp(),//NewsApp(),//MyApp(),
   ));
 }
 
